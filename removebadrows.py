@@ -16,9 +16,16 @@ with open("C:\Users\Nikhil Gopal\PycharmProjects\sportsstats\salaryandruns.csv")
 
 filehandle_messy_data.close()
 
+list_of_years = []
+
 with open('salaryandrunscleaned.csv', 'wb') as filehandle_cleaned_data: #write the good data to a new list
     writer = csv.writer(filehandle_cleaned_data)
     for x in list_to_hold_cleaned_data:
         writer.writerow(x)
-
+        if x[0] in list_of_years:
+            pass
+        else:
+            list_of_years.append(x[0])
+list_of_years.sort()
+print list_of_years
 filehandle_cleaned_data.close()
