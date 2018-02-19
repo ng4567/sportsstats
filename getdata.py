@@ -1,3 +1,4 @@
+#author = Nikhil Gopal
 import csv
 
 #dictionary key is the player id, values are: year, salary, runs
